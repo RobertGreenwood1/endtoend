@@ -14,7 +14,7 @@ interface MenuLink {
 const mainNavLinks: MenuLink[] = [
   { 
     href: "/", 
-    label: "The Record Down Under",
+    label: "End To End New Hampshire",
     icon: <ExternalLink size={16} />
   },
   { 
@@ -48,8 +48,8 @@ export default function Header() {
               href={link.href}
               className={cn(
                 "flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white",
-                "bg-black/60 hover:bg-black/80 backdrop-blur-sm",
-                "whitespace-nowrap flex-shrink-0",
+                "bg-[rgba(34,139,34,0.6)] hover:bg-[rgba(34,139,34,0.8)]",
+                "backdrop-blur-sm whitespace-nowrap flex-shrink-0",
                 // Hide mission, route, crew buttons on small and medium screens
                 index > 0 && index < 4 ? "hidden lg:flex" : "flex"
               )}
@@ -63,7 +63,7 @@ export default function Header() {
           <div className="relative">
             <button
               onClick={() => setShowDonate(!showDonate)}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-main/60 hover:bg-main/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-[rgba(34,139,34,1)] hover:bg-[rgba(20,82,20,1)] backdrop-blur-sm whitespace-nowrap flex-shrink-0"
             >
               <Heart size={16} />
               Donate
@@ -117,7 +117,7 @@ export default function Header() {
           </div>
           <Link
             href=""
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-black/60 hover:bg-black/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-[rgba(34,139,34,1)] hover:bg-[rgba(20,82,20,1)] backdrop-blur-sm whitespace-nowrap flex-shrink-0"
             target="_blank"
             rel="noopener noreferrer"
           >

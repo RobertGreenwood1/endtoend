@@ -21,11 +21,12 @@ export default function HeroSection() {
       {/* Hero content overlay */}
       <div className="container relative z-10">
         <div className="max-w-2xl mx-auto text-center">
-          <h1 className="text-4xl md:text-6xl font-bold text-white mb-6">
-            Lorem Ipsum Dolor Sit Amet
+          <h1 className="text-4xl md:text-4xl font-bold text-white mb-6">
+          First to run the length of New Hampshire for 
+          Type 1 Diabetes
           </h1>
-          <p className="text-lg md:text-xl text-gray-200 mb-8">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
+          <p className="text-lg md:text-1xl text-gray-200 mb-8">
+            First to run the length of New Hampshire for Type 1 Diabetes, consectetur adipiscing elit. Sed do eiusmod tempor incididunt
             ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation.
           </p>
         </div>

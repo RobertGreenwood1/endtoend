@@ -33,7 +33,7 @@ export default function UpdatesSection() {
 
         <div className="text-center mt-8">
           <a
-            href="https://www.instagram.com/williamgoodge/"
+            href=""
             className="text-main hover:text-white transition-colors"
             target="_blank"
             rel="noopener noreferrer"

@@ -39,15 +39,19 @@ export default function Header() {
 
   return (
     <header className="fixed top-0 left-0 right-0 z-50 py-4">
-      <div className="container flex items-center justify-between">
-        <nav className="flex items-center gap-4">
+      {/* Better responsive handling to prevent overflow */}
+      <div className="container px-4 flex flex-col sm:flex-row items-center justify-between gap-4 sm:gap-2 lg:gap-4">
+        <nav className="flex items-center gap-2 lg:gap-4 overflow-visible w-full sm:w-auto justify-center sm:justify-start">
           {mainNavLinks.map((link, index) => (
             <Link
               key={link.href}
               href={link.href}
               className={cn(
                 "flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white",
-                "bg-black/60 hover:bg-black/80 backdrop-blur-sm"
+                "bg-black/60 hover:bg-black/80 backdrop-blur-sm",
+                "whitespace-nowrap flex-shrink-0",
+                // Hide mission, route, crew buttons on small and medium screens
+                index > 0 && index < 4 ? "hidden lg:flex" : "flex"
               )}
             >
               {link.icon && link.icon}
@@ -55,11 +59,11 @@ export default function Header() {
             </Link>
           ))}
         </nav>
-        <div className="flex items-center gap-4">
+        <div className="flex items-center gap-2 lg:gap-4 overflow-visible w-full sm:w-auto justify-center sm:justify-end">
           <div className="relative">
             <button
               onClick={() => setShowDonate(!showDonate)}
-              className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-main/60 hover:bg-main/80 backdrop-blur-sm"
+              className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-main/60 hover:bg-main/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
             >
               <Heart size={16} />
               Donate
@@ -110,7 +114,7 @@ export default function Header() {
           </div>
           <Link
             href="https://aus-share.explore.garmin.com/RecordDownUnder"
-            className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-black/60 hover:bg-black/80 backdrop-blur-sm"
+            className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-black/60 hover:bg-black/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
             target="_blank"
             rel="noopener noreferrer"
           >

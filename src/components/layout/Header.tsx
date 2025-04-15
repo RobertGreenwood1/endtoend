@@ -85,35 +85,38 @@ export default function Header() {
 
             {showDonate && (
               <div className="absolute right-0 mt-2 w-40 bg-background border border-white/10 rounded-md shadow-lg p-2 z-50">
-                <Link
-                  href="https://www.justgiving.com/page/williamgoodge"
-                  className="block px-4 py-2 text-sm hover:text-main hover:bg-white/5 rounded-md"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                <button
+                  
+                  className="block w-full text-left px-4 py-2 text-sm hover:text-main hover:bg-white/5 rounded-md"
+                  
+                  
+                  onClick={() => setShowDonate(false)} // Close dropdown on click
                 >
                   United Kingdom
-                </Link>
-                <Link
-                  href="https://secure.acsevents.org/site/STR?fr_id=110424&pg=personal&px=60448383"
-                  className="block px-4 py-2 text-sm hover:text-main hover:bg-white/5 rounded-md"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </button>
+                <button
+                  
+                  className="block w-full text-left px-4 py-2 text-sm hover:text-main hover:bg-white/5 rounded-md"
+                  
+                  
+                  onClick={() => setShowDonate(false)} // Close dropdown on click
                 >
                   USA
-                </Link>
-                <Link
-                  href="https://www.mycause.com.au/p/369608/will-goodges-record-run-across-australia?popup=1"
-                  className="block px-4 py-2 text-sm hover:text-main hover:bg-white/5 rounded-md"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                </button>
+                <button
+                  
+                  className="block w-full text-left px-4 py-2 text-sm hover:text-main hover:bg-white/5 rounded-md"
+                  
+                  
+                  onClick={() => setShowDonate(false)} // Close dropdown on click
                 >
                   Australia
-                </Link>
+                </button>
               </div>
             )}
           </div>
           <Link
-            href="https://aus-share.explore.garmin.com/RecordDownUnder"
+            href=""
             className="flex items-center gap-2 px-4 py-2 text-sm font-medium transition-colors rounded-md text-white bg-black/60 hover:bg-black/80 backdrop-blur-sm whitespace-nowrap flex-shrink-0"
             target="_blank"
             rel="noopener noreferrer"
